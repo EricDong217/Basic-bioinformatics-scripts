@@ -1,3 +1,5 @@
+# There are several basic bioinformatics scripts for reference
+
 # 1. CUT&RUN Analysis script:
    1. Environment setup and name maps
    2. Rename FASTQ files and first QC
