@@ -67,8 +67,8 @@ done
 
 mkdir -p "${dir}/QC/QC_1"
 
-fastqc -t 8 "${dir}"/CRData/*.gz -o "${dir}/QC/QC_1/"
-multiqc "${dir}/QC/QC_1/." -o "${dir}/QC/QC_1/" 
+fastqc -t 8 "${dir}"/CRData/*.gz --outdir "${dir}/QC/QC_1/"
+multiqc "${dir}/QC/QC_1/." --outdir "${dir}/QC/QC_1/" 
 
 echo "First_QC is finished"
 
@@ -98,8 +98,8 @@ echo "Trimming is finished"
 
 mkdir -p "${dir}/QC/QC_2/"
 
-fastqc -t 8 "${dir}"/Trim/*.trim.fastq.gz -o "${dir}/QC/QC_2/" 
-multiqc "${dir}/QC/QC_2/." -o "${dir}/QC/QC_2/" 
+fastqc -t 8 "${dir}"/Trim/*.trim.fastq.gz --outdir "${dir}/QC/QC_2/" 
+multiqc "${dir}/QC/QC_2/." --outdir "${dir}/QC/QC_2/" 
 
 echo "Second_QC is finished"
 
